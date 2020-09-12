@@ -15,10 +15,16 @@
 # Remove '-fmax-errors=5' from build_flags below to see all.
 #
 
+#[platformio]
+#src_dir      = Marlin
+#boards_dir   = buildroot/share/PlatformIO/boards
+#default_envs = mega2560
+#include_dir  = Marlin
+
 [platformio]
 src_dir      = Marlin
 boards_dir   = buildroot/share/PlatformIO/boards
-default_envs = mega2560
+default_envs = STM32F103RC_btt_512K
 include_dir  = Marlin
 
 #
