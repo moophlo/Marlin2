@@ -1,0 +1,8 @@
+#define CONFIGURATION_ADV_H_VERSION 020007		      |	#define CONFIGURATION_ADV_H_VERSION 020006
+#define HOMING_BUMP_MM      { 0, 0, 2 }       // (mm) Backoff |	#define HOMING_BUMP_MM      { 5, 5, 2 }       // (mm) Backoff
+    #define X_RSENSE          0.075			      |	    #define X_RSENSE          0.11
+    #define Y_RSENSE          0.075			      |	    #define Y_RSENSE          0.11
+    #define Z_RSENSE          0.075			      |	    #define Z_RSENSE          0.11
+    #define E0_RSENSE         0.075			      |	    #define E0_RSENSE         0.11
+  #define TMC_USE_SW_SPI				      |	  //#define TMC_USE_SW_SPI
+  #define MONITOR_DRIVER_STATUS				      |	  //#define MONITOR_DRIVER_STATUS

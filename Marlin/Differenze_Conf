@@ -1,0 +1,21 @@
+#define E3D           // Enable for the E3D all metal hotend. |	//#define E3D           // Enable for the E3D all metal hoten
+//#define chamber         // Enable for Heated Chamber. Therm |	#define chamber         // Enable for Heated Chamber. Thermis
+//#define TMC2209_Enabled // Enable for TMC2209 drivers.      |	#define TMC2209_Enabled // Enable for TMC2209 drivers.
+#define CONFIGURATION_H_VERSION 020007			      |	#define CONFIGURATION_H_VERSION 020006
+#define STRING_CONFIG_H_AUTHOR "(moophlo, Ender-5)" // Who ma |	#define STRING_CONFIG_H_AUTHOR "(jagoosw, Ender-5)" // Who ma
+#define CUSTOM_MACHINE_NAME "Johnny-5"			      |	#define CUSTOM_MACHINE_NAME "Ender-5"
+  #define ENDSTOPPULLUP_XMIN				      |	  //#define ENDSTOPPULLUP_XMIN
+  #define ENDSTOPPULLUP_YMIN				      |	  //#define ENDSTOPPULLUP_YMIN
+#define X_MIN_ENDSTOP_INVERTING true // Set to true to invert |	#define X_MIN_ENDSTOP_INVERTING false // Set to true to inver
+#define Y_MIN_ENDSTOP_INVERTING true // Set to true to invert |	#define Y_MIN_ENDSTOP_INVERTING false // Set to true to inver
+  #define X_DRIVER_TYPE  TMC5160			      |	  #define X_DRIVER_TYPE  A4988
+  #define Y_DRIVER_TYPE  TMC5160			      |	  #define Y_DRIVER_TYPE  A4988
+  #define Z_DRIVER_TYPE  TMC5160			      |	  #define Z_DRIVER_TYPE  A4988
+  #define E0_DRIVER_TYPE TMC5160			      |	  #define E0_DRIVER_TYPE A4988
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 79.84, 80.34, 398.01, |	#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 800, 93}
+#define INVERT_X_DIR true				      |	#define INVERT_X_DIR false
+#define INVERT_Y_DIR true				      |	#define INVERT_Y_DIR false
+#define INVERT_Z_DIR false				      |	#define INVERT_Z_DIR true
+#define INVERT_E0_DIR false				      |	#define INVERT_E0_DIR true
+#define MESH_BED_LEVELING				      |	//#define MESH_BED_LEVELING
+#define RESTORE_LEVELING_AFTER_G28			      |	//#define RESTORE_LEVELING_AFTER_G28
