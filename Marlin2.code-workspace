@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"name": "Marlin2",
+			"path": "."
+		},
+		{
+			"name": "Marlin",
+			"path": "../Marlin"
+		}
+	],
+	"settings": {
+		"git.ignoreLimitWarning": true
+	}
+}
