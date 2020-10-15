@@ -659,14 +659,14 @@
 
 //#define SENSORLESS_BACKOFF_MM  { 2, 2 }     // (mm) Backoff from endstops before sensorless homing
 
-#define HOMING_BUMP_MM      { 0, 0, 2 }       // (mm) Backoff from endstops after first bump: {0,0,2} for sensorless homing; {5,5,2} for endstops.
-#define HOMING_BUMP_DIVISOR { 4, 4, 4 }       // Re-Bump Speed Divisor (Divides the Homing Feedrate)
+#define HOMING_BUMP_MM      { 5, 5, 2 }       // (mm) Backoff from endstops after first bump: {0,0,2} for sensorless homing; {5,5,2} for endstops.
+#define HOMING_BUMP_DIVISOR { 2, 2, 4 }       // Re-Bump Speed Divisor (Divides the Homing Feedrate)
 
 //#define HOMING_BACKOFF_POST_MM { 2, 2, 2 }  // (mm) Backoff from endstops after homing
 
 //#define QUICK_HOME                          // If G28 contains XY do a diagonal move first
-#define HOME_Y_BEFORE_X                     // If G28 contains XY home Y before X
-#define CODEPENDENT_XY_HOMING               // If X/Y can't home without homing Y/X first
+//#define HOME_Y_BEFORE_X                     // If G28 contains XY home Y before X
+//#define CODEPENDENT_XY_HOMING               // If X/Y can't home without homing Y/X first
 
 // @section bltouch
 
@@ -1854,8 +1854,8 @@
  *
  * Override the default value based on the driver type set in Configuration.h.
  */
-#define MINIMUM_STEPPER_POST_DIR_DELAY 20
-#define MINIMUM_STEPPER_PRE_DIR_DELAY 20
+//#define MINIMUM_STEPPER_POST_DIR_DELAY 20
+//#define MINIMUM_STEPPER_PRE_DIR_DELAY 20
 
 /**
  * Minimum stepper driver pulse width (in µs)
@@ -1868,7 +1868,7 @@
  *
  * Override the default value based on the driver type set in Configuration.h.
  */
-#define MINIMUM_STEPPER_PULSE 0
+//#define MINIMUM_STEPPER_PULSE 0
 
 /**
  * Maximum stepping rate (in Hz) the stepper driver allows
@@ -1882,7 +1882,7 @@
  *
  * Override the default value based on the driver type set in Configuration.h.
  */
-#define MAXIMUM_STEPPER_RATE 400000
+//#define MAXIMUM_STEPPER_RATE 400000
 
 // @section temperature
 
@@ -2396,14 +2396,14 @@
    * Override default SPI pins for TMC2130, TMC2160, TMC2660, TMC5130 and TMC5160 drivers here.
    * The default pins can be found in your board's pins file.
    */
-  //#define X_CS_PIN          P1_10
-  //#define Y_CS_PIN          P1_09
-  //#define Z_CS_PIN          P1_08
+  //#define X_CS_PIN          -1
+  //#define Y_CS_PIN          -1
+  //#define Z_CS_PIN          -1
   //#define X2_CS_PIN         -1
   //#define Y2_CS_PIN         -1
   //#define Z2_CS_PIN         -1
   //#define Z3_CS_PIN         -1
-  //#define E0_CS_PIN         P1_04
+  //#define E0_CS_PIN         -1
   //#define E1_CS_PIN         -1
   //#define E2_CS_PIN         -1
   //#define E3_CS_PIN         -1
@@ -2418,9 +2418,9 @@
    * but you can override or define them here.
    */
   #define TMC_USE_SW_SPI
-  //#define TMC_SW_MOSI       P1_17
-  //#define TMC_SW_MISO       P0_05
-  //#define TMC_SW_SCK        P0_04
+  //#define TMC_SW_MOSI       -1
+  //#define TMC_SW_MISO       -1
+  //#define TMC_SW_SCK        -1
 
 
   /**
@@ -2556,7 +2556,7 @@
    *
    * Comment *_STALL_SENSITIVITY to disable sensorless homing for that axis.
    */
-  #define SENSORLESS_HOMING // StallGuard capable drivers only
+  //#define SENSORLESS_HOMING // StallGuard capable drivers only
 
   #if EITHER(SENSORLESS_HOMING, SENSORLESS_PROBING)
     // TMC2209: 0...255. TMC2130: -64...63
