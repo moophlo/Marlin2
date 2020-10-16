@@ -2465,7 +2465,7 @@
    * Use Trinamic's ultra quiet stepping mode.
    * When disabled, Marlin will use spreadCycle stepping mode.
    */
-  //#define STEALTHCHOP_XY
+  #define STEALTHCHOP_XY
   #define STEALTHCHOP_Z
   #define STEALTHCHOP_E
 
@@ -2514,9 +2514,9 @@
    */
   #define HYBRID_THRESHOLD
 
-  #define X_HYBRID_THRESHOLD      45  // [mm/s]
+  #define X_HYBRID_THRESHOLD     100  // [mm/s]
   #define X2_HYBRID_THRESHOLD    100
-  #define Y_HYBRID_THRESHOLD      45
+  #define Y_HYBRID_THRESHOLD     100
   #define Y2_HYBRID_THRESHOLD    100
   #define Z_HYBRID_THRESHOLD       3
   #define Z2_HYBRID_THRESHOLD      3
@@ -2556,13 +2556,13 @@
    *
    * Comment *_STALL_SENSITIVITY to disable sensorless homing for that axis.
    */
-  #define SENSORLESS_HOMING // StallGuard capable drivers only
+  //#define SENSORLESS_HOMING // StallGuard capable drivers only
 
   #if EITHER(SENSORLESS_HOMING, SENSORLESS_PROBING)
     // TMC2209: 0...255. TMC2130: -64...63
-    #define X_STALL_SENSITIVITY  3
+    #define X_STALL_SENSITIVITY  15
     #define X2_STALL_SENSITIVITY X_STALL_SENSITIVITY
-    #define Y_STALL_SENSITIVITY  3
+    #define Y_STALL_SENSITIVITY  5
     #define Y2_STALL_SENSITIVITY Y_STALL_SENSITIVITY
     //#define Z_STALL_SENSITIVITY  40
     //#define Z2_STALL_SENSITIVITY Z_STALL_SENSITIVITY
